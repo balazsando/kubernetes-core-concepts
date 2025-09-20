@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mongo-env
+data:
+  MONGODB_DBNAME: "mydb"
+  MONGODB_USERNAME: "admin"
+  MONGODB_ROLE: "readWrite"

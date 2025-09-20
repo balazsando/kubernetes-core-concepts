@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-pod
+spec:
+  volumes:
+    - name: data
+      awsElasticBlockStore:
+        volumeID: <volume-ID>
+        fsType: ext4
+  containers:
+    - image: alpine
+      name: my-app
+      volumeMounts:
+        - mountPath: /data/storage
+          name: data
